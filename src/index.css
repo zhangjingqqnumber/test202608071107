@@ -87,18 +87,6 @@ body::before {
 
 /* ---------- 动效 ---------- */
 
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-.marquee-track {
-  animation: marquee 32s linear infinite;
-}
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
 @keyframes kenburns {
   from {
     transform: scale(1.1);

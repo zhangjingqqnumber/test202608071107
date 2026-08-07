@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import type { Product } from "./data/shop";
 import { usePrefersReducedMotion } from "./lib";
 import { Header, TopBar } from "./components/Chrome";
-import Hero, { Ticker } from "./components/Hero";
+import Hero from "./components/Hero";
 import FlashSale from "./components/FlashSale";
 import Ranking from "./components/Ranking";
 import GuessLike from "./components/GuessLike";
@@ -60,7 +60,6 @@ export default function App() {
 
       <main>
         <Hero onLogin={() => setLoginOpen(true)} />
-        <Ticker />
         <FlashSale onAdd={addToCart} />
         <Ranking onAdd={addToCart} />
         <GuessLike
