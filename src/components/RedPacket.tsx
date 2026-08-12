@@ -201,7 +201,7 @@ export default function RedPacket({ notify }: { notify: (msg: string) => void })
               >
                 {/* 金额卡片(从红包里抽出) */}
                 <div
-                  className="absolute left-1/2 top-0 z-10 w-[216px] -translate-x-1/2 rounded-xl border border-gold-400/70 bg-gradient-to-b from-[#ffe9c2] to-[#ffc24d] px-5 pb-5 pt-6 text-center shadow-xl transition-transform duration-700 ease-out"
+                  className="absolute left-1/2 top-0 z-10 w-[216px] rounded-xl border border-gold-400/70 bg-gradient-to-b from-[#ffe9c2] to-[#ffc24d] px-5 pb-5 pt-6 text-center shadow-xl transition-transform duration-700 ease-out"
                   style={{ transform: `translate(-50%, ${isOpened ? "-64px" : "96px"})` }}
                 >
                   <p className="text-[11px] font-bold tracking-[0.3em] text-[#a3540a]">恭喜发财 · 大吉大利</p>
