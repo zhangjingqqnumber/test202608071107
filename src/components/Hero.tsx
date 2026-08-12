@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ANNOUNCEMENTS, BANNERS, CATEGORIES, SERVICES, TICKER } from "../data/shop";
+import { ANNOUNCEMENTS, BANNERS, CATEGORIES, SERVICES } from "../data/shop";
 import { usePrefersReducedMotion } from "../lib";
 import { Icon } from "./icons";
 
@@ -278,21 +278,4 @@ export default function Hero({ onLogin }: { onLogin: () => void }) {
   );
 }
 
-/** 全宽滚动播报条 */
-export function Ticker() {
-  return (
-    <div className="marquee mt-8 overflow-hidden border-y border-ink-700 bg-ink-900 py-2.5">
-      <div className="marquee-track flex w-max items-center">
-        {[...TICKER, ...TICKER].map((t, i) => (
-          <span key={i} className="flex items-center text-sm text-cream/85">
-            <span className="flex items-center gap-2 px-6">
-              <Icon name="bolt" className="h-3.5 w-3.5 text-tao-400" />
-              {t}
-            </span>
-            <span className="text-[8px] text-ink-500">◆</span>
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
+

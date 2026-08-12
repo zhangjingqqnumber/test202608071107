@@ -87,18 +87,6 @@ body::before {
 
 /* ---------- 动效 ---------- */
 
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-.marquee-track {
-  animation: marquee 32s linear infinite;
-}
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
 @keyframes kenburns {
   from {
     transform: scale(1.1);
@@ -215,6 +203,108 @@ body::before {
 }
 .anim-spin-once {
   animation: spinOnce 0.5s ease both;
+}
+
+/* 红包:开启抖动 */
+@keyframes envshake {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  20% {
+    transform: rotate(-3deg) translateY(-3px);
+  }
+  40% {
+    transform: rotate(3deg) translateY(2px);
+  }
+  60% {
+    transform: rotate(-2.5deg) translateY(-2px);
+  }
+  80% {
+    transform: rotate(2deg) translateY(1px);
+  }
+}
+.anim-envshake {
+  animation: envshake 0.45s ease-in-out both;
+}
+
+/* 红包:封口金印脉冲 */
+@keyframes sealpulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(255 194 77 / 0.55);
+  }
+  50% {
+    transform: scale(1.07);
+    box-shadow: 0 0 0 14px rgb(255 194 77 / 0);
+  }
+}
+.anim-sealpulse {
+  animation: sealpulse 1.8s ease-in-out infinite;
+}
+
+/* 红包:领取动态滑入 */
+@keyframes feedIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-feed {
+  animation: feedIn 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes envShake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-4deg);
+  }
+  40% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+}
+.anim-envshake {
+  animation: envShake 0.5s ease both;
+}
+
+@keyframes sealPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255 194 77 / 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 24px rgb(255 194 77 / 0);
+  }
+}
+.anim-sealpulse {
+  animation: sealPulse 1.7s ease-out infinite;
+}
+
+@keyframes feedIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-feed {
+  animation: feedIn 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 /* 滚动显现 */

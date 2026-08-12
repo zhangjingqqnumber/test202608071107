@@ -2,8 +2,9 @@ import { useCallback, useState } from "react";
 import type { Product } from "./data/shop";
 import { usePrefersReducedMotion } from "./lib";
 import { Header, TopBar } from "./components/Chrome";
-import Hero, { Ticker } from "./components/Hero";
+import Hero from "./components/Hero";
 import FlashSale from "./components/FlashSale";
+import RedPacket from "./components/RedPacket";
 import Ranking from "./components/Ranking";
 import GuessLike from "./components/GuessLike";
 import Footer from "./components/Footer";
@@ -60,8 +61,8 @@ export default function App() {
 
       <main>
         <Hero onLogin={() => setLoginOpen(true)} />
-        <Ticker />
         <FlashSale onAdd={addToCart} />
+        <RedPacket notify={notify} />
         <Ranking onAdd={addToCart} />
         <GuessLike
           query={query}
